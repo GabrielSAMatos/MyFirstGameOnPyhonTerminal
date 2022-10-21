@@ -188,4 +188,4 @@ fisrt_awser = begin_choice(Start_1)
 print(fisrt_awser)
 
 #Need to finish "move on" and "examine" options. \
-#Remember to be able to go back to the beginning after moving forward!
+#Remember to be able to go back to the beginning after moving forwar!
