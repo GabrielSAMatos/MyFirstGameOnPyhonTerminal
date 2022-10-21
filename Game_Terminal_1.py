@@ -350,5 +350,5 @@ while True:
         movie_on()
         break
 
-#Need to finish "move on" and "examine" options. \
+#Need to finish "move onX" and "examine✓" options. \
 #Remember to be able to go back to the beginning after moving forward!
