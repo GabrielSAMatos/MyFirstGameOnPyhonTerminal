@@ -311,8 +311,7 @@ def examine(key):
                         sleep(2)
                         chest(2)
                         short_line()
-                        pick = input('Empty.\n(go back)\n(cry)')
-                        short_line()
+                        pick = input('Empty.\n(go back)\n(cry)\n')
                         short_line()
                         if pick == 'go back':
                             sleep(2)
@@ -321,7 +320,7 @@ def examine(key):
                             sleep(2)
                             cry()
                             sleep(2)
-                            begin_choice()
+                            return
                         else:
                             erro()                     
         elif answer == 'go back':
