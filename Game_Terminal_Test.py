@@ -67,7 +67,7 @@ def forest(woods='start'):
     if woods == 'start':
         forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
-森森森森森森森森森森森森森森森森森森森森○⩀   ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森○ ⩀  ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森    /⫎森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
@@ -113,17 +113,7 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|. |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|. |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|⩀ |森森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
-    elif woods == 'chest':
-        forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
-森森森森森森森森森森森森森森森森森森森森○   ⩀⊞ 森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森    /⫎森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
-森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  .|森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
     print(forest)
 
@@ -219,7 +209,8 @@ def chest_without_key():
         sleep(1.5)
         chest('without')
         line(LINE_SIZE)
-        colors('Empty.\n(go back)\n(cry)', 'gray')
+        colors('Empty.', 'gray')
+        colors('(go back)\n(cry)', 'cyan')
         back_or_cry = input()
         if back_or_cry == 'go back':
             return 
@@ -241,7 +232,6 @@ def move_on():
 def examine(chest_0):
     while True:
         sleep(1.5)
-        forest('chest')
         line(LINE_SIZE)
         colors("It's just an old wooden chest. Suspect..", 'gray')
         sleep(1.5)
@@ -286,12 +276,12 @@ def nap(nap_times):
         return 
     elif (len(nap_times)) == 2:
         sleep(1.5)
-        colors('Zzzzzzzzzzzzz','gray')
+        colors('Zzzzzzzzzzzzzzz','gray')
         forest('nap2')
         colors('*now woke up*\nYou almost fell asleep again', 'gray')
         line(SHORT_LINE_SIZE)
         return 
-    if (len(nap_times)) == 3:
+    elif (len(nap_times)) == 3:
         sleep(1.5)
         forest('nap3')
         chain()
@@ -299,7 +289,7 @@ def nap(nap_times):
  known as the "papangus", took you!  ')
         game_over()
 
-start()
-introduction()
-beginning()
+#start()
+#introduction()
+#beginning()
 first_choice()
