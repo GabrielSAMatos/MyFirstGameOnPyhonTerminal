@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+from time import sleep 
+
+#1 = device, white/gray
+#2 = fight, white/red
+#3 = place, blue/green
+#4 = secret, blue
+#5 = items, pink/blue
+#6 = black/red
+#7 = chest, black/yellow
+
+>>>>>>> main
 #tree: 森
 #rock: ○
 #person: ⩀
@@ -23,6 +36,7 @@ def colors(msg, color='black'):
         print(f'\033[7;49;95m{msg}\033[m ')
     elif color == 'redb':
         print(f'\033[7;49;91m{msg}\033[m')
+<<<<<<< HEAD
     elif color == 'gray':
         print(f'\033[7;49;90m{msg}\033[m')
     elif color == 'cyan':
@@ -37,6 +51,10 @@ def line(size=LINE_SIZE):
 
 def chain(size=LINE_SIZE):
     colors('-='*size, 'redb')
+=======
+    else:
+        print(f'\033[7;49;33{msg}\033[m')
+>>>>>>> main
 
 
 def game_over():
@@ -46,8 +64,30 @@ def game_over():
     exit()
 
 
+<<<<<<< HEAD
 def invalid():
     colors('ERROR. Invalid Alternative!', 'redw')
+=======
+def start(msg):
+    """
+    Beginning of the game
+    """
+    staart = False
+    while not staart:
+        start = input(msg).strip().lower()
+        if start == 'start':
+            begin()
+            return 'start'
+        elif start == 'exit':
+            return 'exit'
+        else:
+            print('Please, just type "start" or "exit" ')
+
+
+def erro():
+    erro = 'ERROR: Invalid alternative!'
+    colors(erro, 6)
+>>>>>>> main
 
 
 def start():
@@ -63,8 +103,21 @@ def start():
             print('Please type "Start" or "Exit" to continue.')
 
 
+<<<<<<< HEAD
 def forest(woods='start'):
     if woods == 'start':
+=======
+def short_line():
+    line = '~'*15
+    colors(line, 4)
+
+
+def forest_begin(x=''):
+    """
+    Just the initial scenario.
+    """
+    if x == '':
+>>>>>>> main
         forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
 森森森森森森森森森森森森森森森森森森森森○ ⩀  ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
@@ -74,7 +127,11 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+<<<<<<< HEAD
     elif woods == 'nap1':
+=======
+    elif x == 'nap1':
+>>>>>>> main
         forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
 森森森森森森森森森森森森森森森森森森森森○⩀Zz ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
@@ -84,8 +141,12 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+<<<<<<< HEAD
 
     elif woods == 'nap2':
+=======
+    elif x == 'nap2':
+>>>>>>> main
         forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
 森森森森森森森森森森森森森森森森森森森森○⩀Zz ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
@@ -95,7 +156,11 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+<<<<<<< HEAD
     elif woods == 'nap3':
+=======
+    elif x == 'nap3':
+>>>>>>> main
         forest = '\033[7;49;91m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森s森森森森森森森 森森森森森\
 森森森森森森森森森森森森森森森森森森森森○⩀↞Ÿ ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
@@ -105,14 +170,31 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|Ÿ↟|森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|Ÿ↟|森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|Ÿ↟|森森森森森森森森森森森森森森森森森森森森森森\033[m'
+<<<<<<< HEAD
     elif woods == 'move on':
         forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
+=======
+    elif x == 'examine':
+        forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
+森森森森森森森森森森森森森森森森森森森森○   ⩀⊞ 森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森    /⫎森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+    elif x == 'move on':
+                forest = '\033[7;49;92m森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森森森森 森森森森森\
+>>>>>>> main
 森森森森森森森森森森森森森森森森森森森森○   ⊞ 森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森    /⫎森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|. |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|. |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|⩀ |森森森森森森森森森森森森森森森森森森森森森森森森\
+<<<<<<< HEAD
 森森森森森森森森森森森森森森森森森森森森|  .|森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
     print(forest)
@@ -124,32 +206,71 @@ def chest(status):
     """
     if status == 'closed':
         colors('____________________________________________________________________________________________\
+=======
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森\
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+    print(f'\n{forest}')
+
+
+def chest(c=0):
+    """
+    Just the view of the chest
+    """
+    if c == 0:
+        chest = '\033[;49;33m____________________________________________________________________________________________\
+>>>>>>> main
 |==========================================================================================|\
 |===================================________________=======================================\
 |||||||||||||||||||||||||||||||||||||     ⌈    ⌉     ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||     ⌊ ⁐  ⌋     ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||_____⌊____⌋_____||||||||||||||||||||||||||||||||||||||||\
 |==========================================================================================|\
+<<<<<<< HEAD
 --------------------------------------------------------------------------------------------', 'yellow')
     elif status == 'with_key':
         colors('____________________________________________________________________________________________\
+=======
+--------------------------------------------------------------------------------------------\033[m'
+    elif c == 1:
+        chest = '\033[;49;33m____________________________________________________________________________________________\
+>>>>>>> main
 |==========================================================================================|\
 |==========================================================================================\
 |||||||||||||||||||||||||||||||||||||        |⁅      ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||        Ⅲ       ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||      O|⁐⁐ |O   ||||||||||||||||||||||||||||||||||||||||\
 |==========================================================================================|\
+<<<<<<< HEAD
 --------------------------------------------------------------------------------------------', 'yellow')
     elif status == 'without':
         colors('____________________________________________________________________________________________\
+=======
+--------------------------------------------------------------------------------------------\033[m'
+    elif c == 2:
+        chest = '\033[;49;33m____________________________________________________________________________________________\
+>>>>>>> main
 |==========================================================================================|\
 |==========================================================================================\
 |||||||||||||||||||||||||||||||||||||                ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||                ||||||||||||||||||||||||||||||||||||||\
 ||||||||||||||||||||||||||||||||||||||                ||||||||||||||||||||||||||||||||||||||||\
 |==========================================================================================|\
+<<<<<<< HEAD
 --------------------------------------------------------------------------------------------', 'yellow')
 
+=======
+--------------------------------------------------------------------------------------------\033[m'
+    elif c == 3:
+        chest = ("""
+ \033[;49;33m____________
+|    |⁅      |
+|    Ⅲ       |
+|  O|⁐⁐ |O   |
+|------------|\033[m
+""")
+    print(chest)
+    
+>>>>>>> main
 
 def cry():
     print("""
@@ -163,6 +284,7 @@ def cry():
 |     /       \        |
 ========================\033[m
 """)
+<<<<<<< HEAD
     line(LINE_SIZE)    
 
 
@@ -198,11 +320,62 @@ def first_choice():
             move_on()
         if choice == 'examine':
             examine(chest_0)
+=======
+
+
+def begin():
+    """
+    Only Text.
+    """     
+    begin= "You wake up in a forest. \
+Behind you is a very large rock, it is still daylight. \
+You only have the clothes on your body, a shirt, pants and shoes (all cloth). \
+To your left is just a dense forest. \
+To your right is a chest. \
+And in front of you is a road."
+    colors(begin,1)
+    line()
+    
+
+
+def begin_1(fa):
+    if fa == 'exit':
+        print(':(')
+        exit()
+    else:
+        begin_1 = 'Theres not much to do. \
+You want to move on. \
+Examine the chest or remain lying down?'
+    colors(begin_1,1)
+
+
+def begin_choice():
+    sucess = False
+    cont_nap = 0
+    forest_begin()
+    while not sucess:
+        line(1)
+        msg = '(move on)\n(examine)\n(nap)\n'
+        choice = input(msg)
+        short_line()
+        if choice == 'move on':
+            sleep(2)
+            print('You go on along the trail')
+            return 'move on'
+        elif choice == 'examine':
+            print('You approach the chest')
+            sleep(2)
+            return 'examine'
+>>>>>>> main
         elif choice == 'nap':
             nap(nap_times)
         else:
+<<<<<<< HEAD
             invalid()
 
+=======
+            erro()
+>>>>>>> main
 
 def chest_without_key():
     while True:
@@ -270,6 +443,7 @@ def nap(nap_times):
     if len(nap_times) == 1:
         sleep(1.5)
         print('Zzzzzzz')
+<<<<<<< HEAD
         forest('nap1')
         colors("*now woke up*\nYou don't know if you're more tired or more willing", 'gray')
         line(SHORT_LINE_SIZE)
@@ -285,11 +459,108 @@ def nap(nap_times):
         sleep(1.5)
         forest('nap3')
         chain()
+=======
+        forest_begin('nap1')
+        print("*now woke up*\nYou don't know if you're more tired or more willing")
+        short_line()
+        return 
+    elif cont_nap == 3:
+        colors('Zzzzzzzzzzzzz',7)
+        forest_begin('nap2')
+        print('*now woke up*\nYou almost fell asleep again')
+        short_line()
+        return 
+    if cont_nap == 4:
+        forest_begin('nap3')
+>>>>>>> main
         print('\033[7;49;91mYou fell into such a deep sleep that the Caucaia tribe,\
  known as the "papangus", took you!  ')
         game_over()
+    
 
+def examine(key):  
+    forest_begin('examine')
+    sleep(2)
+    line()
+    cont = 0
+    chest()
+    print("It's just an old wooden chest. Suspect..")
+    for c in range (3):
+        short_line()
+        answer = input('(open)\n(go back)\n')
+        short_line()
+        if answer == 'open':
+            for cont in range(3):
+                    if (len(key)) > 0:
+                        sleep(2)
+                        chest(1)
+                        sleep(2)
+                        print(f'a mysterious key.')
+                        short_line()
+                        pick = input('(take)\n(go back)\n')
+                        short_line()
+                        if pick == 'take':
+                            sleep(1)
+                            key.remove('key')
+                            print('\nYou took the key')  
+                            short_line()
+                            sleep(1) 
+                            chest(3)
+                            sleep(1)
+                            return key
+                        elif pick == 'go back':
+                            sleep(2)
+                            begin_choice()
+                        else:
+                            erro()
+                    else:
+                        sleep(2)
+                        chest(2)
+                        short_line()
+                        pick = input('Empty.\n(go back)\n(cry)\n')
+                        short_line()
+                        if pick == 'go back':
+                            sleep(2)
+                            begin_choice()
+                        elif pick == 'cry':
+                            sleep(2)
+                            cry()
+                            sleep(2)
+                            return
+                        else:
+                            erro()                     
+        elif answer == 'go back':
+            pass
+            
+        else:
+            erro()
+            
+        
+def movie_on():
+    forest_begin('move on')
+
+<<<<<<< HEAD
 start()
 introduction()
 beginning()
 first_choice()
+=======
+
+obj = ['key']
+Start = start('Start Game? ')
+begin_1(Start)
+fisrt_awser = begin_choice()
+while True:
+    if fisrt_awser == 'examine':
+        key=examine(obj)
+        second_awser = begin_choice()
+        if second_awser == 'move on':
+            movie_on()
+            break
+    else:
+        movie_on()
+        break
+
+#Need to finish "move onX" and "examine✓" options. \
+#Remember to be able to go back to the beginning after moving forward!
+>>>>>>> main
