@@ -115,7 +115,72 @@ def forest(woods='start'):
 森森森森森森森森森森森森森森森森森森森森|⩀ |森森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  .|森森森森森森森森森森森森森森森森森森森森森森森\
 森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森\033[m'
+    elif woods == 'forest_2':
+        forest = """\033[7;49;92m
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森森森/  /森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森森/  /森森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森/  /森森森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森/  /森森森森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森|  |森森森森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森⨹              ⨹  森森森森森森森森森森森森森森森森森森森森森森森森森
+                       Ⅱ     ⩀       ⨻  森森森森森森森森森森森森森森森森森森森森森森森森森 
+森森森森⨃ 森森森森森森⨹ _____________⨺  森森森森森森森森森森森森森森森森森森森森森森森森森
+森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森森\033[m
+"""
     print(forest)
+
+
+def design_stones():
+    stones = """ 
+        ʎ                 ʎ                ʎ                   |
+       ⟨  ⟩              ⟨  ⟩             ⟨  ⟩                 |
+      ⟨    ⟩            ⟨    ⟩           ⟨    ⟩                |
+     ⟨  |   ⟩          ⟨ \  / ⟩         ⟨      ⟩               |
+    ⟨   |     ⟩       ⟨   \/   ⟩       ⟨        ⟩              |
+   ⟨ -------   ⟩     ⟨    / \   ⟩     ⟨ -------- ⟩             |
+  ⟨     |       ⟩   ⟨    /   \   ⟩   ⟨            ⟩            |
+ ⟨      |        ⟩ ⟨    /     \   ⟩ ⟨              ⟩           |
+====================================================           |
+"""
+    colors(stones, 'pink')
+
+
+def design_door():
+    ddoor = """ 
+⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔ ⁔
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   Ⅱ ⁐ Ⅱ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+|Ⅱ  ⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡⅡⅡⅡ   ⅡⅡⅡⅡⅡ
+"""
+    colors(ddoor, 'yellow')
+
+
+def design_corridor():
+    dcorridor = """ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+    print(dcorridor)
 
 
 def chest(status):
@@ -169,13 +234,13 @@ def cry():
 def introduction():     
     introduction = """You wake up in a forest.                                                                   |
 Behind you is a very large rock, it is still daylight.                                     |
-You only have the clothes on your body, a blouse, pants and shoes (all cloth).             |
+You only have the clothes on your body, a shirt, pants and shoes (all cloth).             |
 To your left is just a dense forest.                                                       |
 To your right is a chest.                                                                  |
 And in front of you is a road.'                                                            |"""
     colors(introduction, 'blue')
     line()
-    sleep(8)
+    sleep(5)
 
 
 def beginning():
@@ -183,7 +248,7 @@ def beginning():
 You want to move on.                                                                       |
 Examine the chest or remain lying down.                                                    |"""
     colors(beginning, 'blue')
-    sleep(5)
+    sleep(3)
 
 
 def first_choice():
@@ -225,8 +290,8 @@ def move_on():
     sleep(1.5)
     forest('move on')
     colors('There are some rocks on the way, but you keep going.', 'gray')
-    sleep(5)
-    game_over()
+    sleep(1.5)
+    final_choice()
 
 
 def examine(chest_0):
@@ -244,7 +309,7 @@ def examine(chest_0):
             while True:
                 sleep(1.5)
                 chest('with_key')
-                colors('a misteious key', 'pink')
+                colors('a misterious key', 'pink')
                 colors('(take)\n(go back)', 'cyan')   
                 key = input()
                 line(SHORT_LINE_SIZE)
@@ -289,7 +354,141 @@ def nap(nap_times):
  known as the "papangus", took you!  ')
         game_over()
 
-#start()
-#introduction()
-#beginning()
+
+def final_choice():
+    text_final = """Then you arrive on the other side of the path. 
+There are several triangular stones to your right. 
+To your left there are only two, but between them is a wooden door."""
+    colors(text_final, 'blue')
+    line()
+    while True:
+        sleep(1.5)
+        forest('forest_2')
+        colors('(examine door)\n(examine stones)\n(go back)', 'cyan')
+        final_choice = input()
+        line(SHORT_LINE_SIZE)
+        if final_choice == 'go back':
+            first_choice()
+        elif final_choice == 'examine stones':
+            triangular_stones()
+        elif final_choice == 'examine door':
+            door()
+        else:
+            invalid()
+
+
+def triangular_stones():
+    sleep(1.5)
+    colors("""
+On each of the stones there is a scripture
+For some reason you feel the crises of the feudal system""", 'blue')
+    design_stones()
+    line()
+    while True: 
+        sleep(1.5)
+        colors('(first stone)\n(second stone)\n(third stone)\n(go back)')
+        stone_choice = input()
+        line(SHORT_LINE_SIZE)
+        if stone_choice == 'first stone':
+            colors('Commercial revival', 'yellow')
+        elif stone_choice == 'second stone':
+            colors('Increased circulation of coins', 'yellow')
+        elif stone_choice == 'third stone':
+            colors('The Crusades provided the return of European contact with the East, \nbreaking the isolation of the feudal system.', 'yellow')
+        elif stone_choice == 'go back':
+            final_choice() 
+        else:
+            invalid()
+
+
+def door():
+    sleep(1.5)
+    colors("A solid wood door, looks like it's been here for at least 2 centuries", 'blue')
+    design_door()
+    line()
+    while True:
+        sleep(1.5)
+        colors('(open the door)\n(go back)', 'cyan')
+        door_choice = input()
+        line(SHORT_LINE_SIZE)
+        if door_choice == 'open the door':
+            if (len(chest_0) == 1):
+                colors('locked', 'yellow')
+            else:
+                colors('the door opened', 'yellow')
+                corridor()
+        elif door_choice == 'go back':
+            final_choice()
+        else:
+            invalid()
+
+
+def corridor():
+    sleep(1.5)
+    colors("There is a completely dark hallway. \nYou can't see a hand in front of you.", 'blue')
+    design_corridor()
+    line()
+    while True: 
+        sleep(1.5)
+        colors('(enter)\n(go back)')
+        choice_corridor = input()
+        if choice_corridor == 'enter':
+            colors('BOOOOOOOOM!!!!', 'redb')
+            colors('someone slammed the door', 'redb')
+            line()
+            in_corridor()
+        elif choice_corridor == 'go back':
+            door()
+        else:
+            invalid()
+
+
+def in_corridor():
+    while True:
+        sleep(1.5)
+        colors('(advance)\n(cry)', 'cyan')
+        in_corridor_choice = input()
+        line(SHORT_LINE_SIZE)
+        if in_corridor_choice == 'advance':
+            colors('you are terrified but move forward', 'redb')
+            while True:
+                sleep(1.5)
+                colors('(go further)\n(cry)')
+                in_corridor_choice2 = input()
+                if in_corridor_choice2 == 'go further':
+                    colors("""
+You start to feel something strange. 
+Then it starts to levitate. 
+Your thoughts begin to turn, as if traveling through space and time, 
+you can see the entire history of the universe passing from beginning to end. 
+Your body is like it's in a swimming pool. 
+Until... 
+After all this paranormal and celestial intrapersonal journey, 
+you realize the real fact that because you ran this game, 
+the only reason you started was to hire its creator, 
+Gabriel, the creative, beautiful, cute , smart, developer, conqueror of one peace.""", 'pink')
+                    line()
+                    credits()
+                elif in_corridor_choice2 == 'cry':
+                    cry()
+                else:
+                    invalid()
+        elif in_corridor_choice == 'cry':
+            cry()
+        else:
+            invalid()
+
+
+def credits():
+    sleep(5)
+    colors("Thanks for playing my first game and also project.\n My linkedin: https://www.linkedin.com/in/gabriel-matos-0663701a2/\n \
+My github: https://github.com/GabrielSAMatos", 'blue')
+    sleep(3)
+    game_over()
+
+
+start()
+introduction()
+beginning()
 first_choice()
+final_choice()
